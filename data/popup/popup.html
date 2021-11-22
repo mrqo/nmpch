@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="popup.css">
+    <link type="text/css" rel="stylesheet" href="explore/explore.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table class="nospacing">
+      <tr type="dark">
+        <td type="ON" class="border" id="lights-on"></td>
+        <td type="OFF" id="lights-off"></td>
+      </tr>
+      <tr>
+        <td class="border" id="lights-on-footer">Day Mode</td>
+        <td id="lights-off-footer">Night Mode</td>
+      </tr>
+    </table>
+    <table>
+      <tr type="dark">
+        <td class="title" id="hue-slider-value">Hue-Rotate</td>
+        <td class="action">
+          <input id="hue-slider" type="range" min="0" max="360" step="1"></input>
+        </td>
+      </tr>
+      <tr type="dark">
+        <td class="title" id="dimmer-slider-value">Brightness</td>
+        <td class="action">
+          <input id="dimmer-slider" type="range" min="0" max="100" step="1"></input>
+        </td>
+      </tr>
+      <tr type="dark">
+        <td class="title" id="contrast-slider-value">Contrast</td>
+        <td class="action">
+          <input id="contrast-slider" type="range" min="0" max="100" step="1"></input>
+        </td>
+      </tr>
+      <tr type="dark">
+        <td class="title" id="sepia-slider-value">Sepia</td>
+        <td class="action">
+          <input id="sepia-slider" type="range" min="0" max="100" step="1"></input>
+        </td>
+      </tr>
+      <tr type="dark">
+        <td class="title" id="grayscale-slider-value">Grayscale</td>
+        <td class="action">
+          <input id="grayscale-slider" type="range" min="0" max="100" step="1"></input>
+        </td>
+      </tr>
+      <tr type="dark">
+        <td class="title">Toggle</td>
+        <td class="info">Ctrl + Shift + Y</td>
+      </tr>
+    </table>
+    <table class="buttons">
+      <tr><td class="icon">➤</td><td id="add-whitelist" type="whitelist" class="a-button"></td></tr>
+      <tr><td class="icon">➤</td><td id="remove-whitelist" type="whitelist" class="a-button"></td></tr>
+      <tr><td class="icon">➤</td><td id="options" type="options" class="a-button"></td></tr>
+      <tr><td class="icon">➤</td><td id="test" type="test" class="a-button"></td></tr>
+      <tr><td class="icon">➤</td><td id="support" type="support" class="a-button"></td></tr>
+      <tr><td class="icon">➤</td><td id="donation" type="donation" class="a-button"></td></tr>
+    </table>
+    <div id="explore"></div>
+    <!-- -->
+    <script type="text/javascript" async src="explore/explore.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>

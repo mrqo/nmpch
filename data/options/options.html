@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Options - Night Mode Pro</title>
+    <link type="text/css" rel="stylesheet" href="options.css">
+  </head>
+  <body class="flex">
+    <div class="flex container">
+      <div id="header">
+        <img class="icon" src="../icons/128.png"></img>
+      </div>
+      <span class="information-span">A. General Settings</span>
+      <table class="items">
+        <tbody>
+          <tr>
+            <td>1. Enable Hotkey for switching the Addon ON / OFF <input placeholder="Ctrl + Shift + S" data-pref="hotkey.modecombo" type="text" disabled></input></td>
+            <td style="width: 30px"><input data-pref="hotkey.mode" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>2. Enable Hotkey for adding the active Tab URL to the whitelist table <input placeholder="Ctrl + Shift + A" data-pref="hotkey.addcombo" type="text" disabled></input></td>
+            <td style="width: 30px"><input data-pref="hotkey.add" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>3. Enable Hotkey for removing the active Tab URL from the whitelist table <input placeholder="Ctrl + Shift + V" data-pref="hotkey.removecombo" type="text" disabled></input></td>
+            <td style="width: 30px"><input data-pref="hotkey.remove" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>4. Open support page when the addon is upgraded</td>
+            <td style="width: 30px"><input data-pref="welcome.open" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>5. When a webpage has black background color, do NOT apply night mode (default is active)</td>
+            <td style="width: 30px"><input data-pref="addon.hasblack" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>6. Enable Night Mode for Top domain + all Frames (iframes) within the page (default is Top domain only)</td>
+            <td style="width: 30px"><input data-pref="addon.frame" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>7. Force dark body (dark gray) on all websites. Note, this option is still in Beta and may not work properly on all websites (default is not active)</td>
+            <td style="width: 30px"><input data-pref="addon.bodydark" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>8. Apply night mode for all elements with css "background-image" property. Note, this option is still in Beta and may not work properly on all websites (default is not active)</td>
+            <td style="width: 30px"><input data-pref="addon.hasbackgroundimage" type="checkbox"></input></td>
+          </tr>
+          <tr>
+            <td>8. Apply night mode for all elements with css "background-color" property. Note, this option is still in Beta and may not work properly on all websites (default is not active)</td>
+            <td style="width: 30px"><input data-pref="addon.hasbackgroundcolor" type="checkbox"></input></td>
+          </tr>
+        </tbody>
+      </table>
+      <span class="information-span">B. Automatic Mode</span>
+      <table class="items">
+        <tr>
+          <td>Enable automatic mode to switch the addon ON|OFF automatically (default is disabled)</td>
+          <td style="width: 30px; text-align: right"><input style="margin: 0 5px 0 0" data-pref="automatic.mode" type="checkbox"></input></td>
+        </tr>
+        <tr>
+          <td>Turn the Addon ON at (please write desired time in this format HH:MM)</td>
+          <td class="time-td"><input class="time" data-pref="automatic.on" type="time"></input></td>
+        </tr>
+        <tr>
+          <td>Turn the Addon OFF at (please write desired time in this format HH:MM)</td>
+          <td class="time-td"><input class="time" data-pref="automatic.off" type="time"></input></td>
+        </tr>
+      </table>
+      <span class="information-span">C. Whitelist</span>
+      <span class="information-span" style="margin: 0">
+        To add a website to the whitelist table, enter the website address in the input field below and click on (+) sign or press enter. Note: the address should be a valid URL (i.e. https://www.google.com/), otherwise it won't be added to the list.
+      </span>
+      <div id="content" class="flex">
+        <table style="padding: 5px 0">
+          <tbody>
+            <tr style="outline: none">
+              <td id="input-field-td">
+                <input id="input-field" type="text" placeholder="Enter a website to exclude it from Night Mode (i.e. https://www.google.com/)"></input>
+              </td>
+              <td id="input-field-add" title="Add Website to the White-list"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="website-list"><table id="white-list-table" style="border-spacing: 0 5px"></table></div>
+      </div>
+    </div>
+    <!-- -->
+    <script type="text/javascript" src="options.js"></script>
+  </body>
+</html>
